@@ -1,15 +1,15 @@
 {
-    "name": ":vendor_slug/:package_slug",
+    "name": "osenco/filament-spatie-passkeys",
     "description": ":package_description",
     "keywords": [
-        ":vendor_name",
+        "osenco",
         "laravel",
-        ":package_slug"
+        "filament-spatie-passkeys"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/osenco/filament-spatie-passkeys",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/osenco/filament-spatie-passkeys/issues",
+        "source": "https://github.com/osenco/filament-spatie-passkeys"
     },
     "license": "MIT",
     "authors": [
@@ -24,7 +24,8 @@
         "filament/filament": "^3.0",
         "filament/forms": "^3.0",
         "filament/tables": "^3.0",
-        "spatie/laravel-package-tools": "^1.15.0"
+        "spatie/laravel-package-tools": "^1.15.0",
+        "spatie/laravel-passkeys": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -41,13 +42,14 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Osen\\Filament\\Passkeys\\": "src/",
+            "Osen\\Filament\\Passkeys\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Osen\\Filament\\Passkeys\\Tests\\": "tests/",
+            "Osen\\Filament\\Passkeys\\Database\\Factories\\": "database/factories/"
         }
     },
     "scripts": {
@@ -67,10 +69,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Osen\\Filament\\Passkeys\\PasskeyServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "OsenFilamentPasskeys": "Osen\\Filament\\Passkeys\\Facades\\OsenFilamentPasskeys"
             }
         }
     },
